@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const [visible, setVisible] = useState(false);
@@ -16,14 +17,25 @@ const LoginPage = () => {
   } = useForm();
 
   const handleLogin = async (data) => {
-    console.log("login data:", data);
     const { data: res, error } = await authClient.signIn.email({
       email: data.email,
       password: data.password,
       rememberMe: true,
       callbackURL: "/",
     });
-    console.log(res, error);
+
+    if (error) {
+      toast.error(error.message || "Login failed", {
+        position: "top-center",
+        autoClose: 2000,
+      });
+      return;
+    }
+
+    toast.success("Logged in successfully", {
+      position: "top-center",
+      autoClose: 2000,
+    });
   };
 
   return (

@@ -60,6 +60,11 @@ const Navbar = () => {
                   <Link href={"/animals"}>All Animals</Link>
                 </button>
               </li>
+              <li>
+                <button>
+                  <Link href={"/profile"}>My Profile</Link>
+                </button>
+              </li>
             </ul>
           </div>
           <div className="navbar-end gap-2">
@@ -69,7 +74,17 @@ const Navbar = () => {
               <div className="flex items-center gap-3">
                 <p className="font-semibold">{user.name}</p>
 
-                <FaCircleUser className="text-3xl" />
+                {user?.image ? (
+                  <Image
+                    src={user.image}
+                    alt=""
+                    className="w-8 h-8 rounded-full"
+                    width={30}
+                    height={30}
+                  />
+                ) : (
+                  <FaCircleUser className="text-3xl" />
+                )}
 
                 <button
                   onClick={async () => {
@@ -107,6 +122,11 @@ const Navbar = () => {
             <li>
               <button>
                 <Link href={"/animals"}>All Animals</Link>
+              </button>
+            </li>
+            <li>
+              <button>
+                <Link href={"/profile"}>My Profile</Link>
               </button>
             </li>
           </ul>

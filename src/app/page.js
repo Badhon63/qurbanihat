@@ -17,18 +17,20 @@ const Home = async () => {
 
   return (
     <div className="px-6">
-      <section className="bg-green-50 py-16 text-center rounded-xl mt-6">
-        <h1 className="text-4xl font-bold mb-4">
+      <section className="bg-green-50 py-16 text-center rounded-xl mt-6 ">
+        <h1 className="text-4xl font-bold mb-4 animate__animated animate__fadeInDown">
           QurbaniHat Livestock Marketplace
         </h1>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6 animate__animated animate__fadeInDown">
           Find healthy cows, goats and buffalo for Qurbani
         </p>
-        <Link href={"/animals"}>
-          <button className="btn btn-success text-white text-base ">
-            Browse Animals
-          </button>
-        </Link>
+        <div className="animate__animated animate__fadeInDown">
+          <Link href={"/animals"}>
+            <button className="btn btn-success text-white text-base ">
+              Browse Animals
+            </button>
+          </Link>
+        </div>
       </section>
 
       <section className="mt-16 container mx-auto">
@@ -104,14 +106,16 @@ const Home = async () => {
         <h2 className="text-2xl font-bold mb-6">Qurbani Tips</h2>
 
         <div className="space-y-3 text-gray-700 font-medium">
-          <p className="border p-3 rounded-lg">
+          <p className="border border-black/20 p-3 rounded-lg">
             1. Choose healthy animals with proper weight
           </p>
-          <p className="border p-3 rounded-lg">
+          <p className="border border-black/20 p-3 rounded-lg">
             2. Check age and health condition
           </p>
-          <p className="border p-3 rounded-lg">3. Avoid weak or sick animals</p>
-          <p className="border p-3 rounded-lg">
+          <p className="border border-black/20 p-3 rounded-lg">
+            3. Avoid weak or sick animals
+          </p>
+          <p className="border border-black/20 p-3 rounded-lg">
             4. Ensure proper care before purchase
           </p>
         </div>

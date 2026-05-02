@@ -5,9 +5,11 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
   const [visible, setVisible] = useState(false);
+  const [image, setImage] = useState("");
 
   const {
     register,
@@ -16,13 +18,25 @@ const RegisterPage = () => {
   } = useForm();
 
   const handleLogin = async (data) => {
-    console.log(data);
     const { data: res, error } = await authClient.signUp.email({
       name: data.name,
       email: data.email,
       password: data.password,
+      image: data.image,
     });
-    console.log("data:", res, "error:", error);
+
+    if (error) {
+      toast.error(error.message || "Registration failed", {
+        position: "top-center",
+        autoClose: 2000,
+      });
+      return;
+    }
+
+    toast.success("Account created successfully", {
+      position: "top-center",
+      autoClose: 2000,
+    });
   };
 
   return (
@@ -48,6 +62,15 @@ const RegisterPage = () => {
           {...register("email", { required: true })}
         />
         {errors.email && <p className="text-red-500">* Email is required</p>}
+
+        <label className="label">Profile Photo URL</label>
+        <input
+          type="text"
+          className="input"
+          placeholder="Image link"
+          {...register("image", { required: true })}
+        />
+        {errors.image && <p className="text-red-500">* Image is required</p>}
 
         <label className="label">Password</label>
         <div className="relative">
