@@ -2,10 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const getAnimals = async () => {
-  const res = await fetch("http://localhost:3000/data/animals.json", {
-    cache: "no-store",
-  });
-
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/data/animals.json`,
+    {
+      cache: "no-store",
+    },
+  );
   return res.json();
 };
 

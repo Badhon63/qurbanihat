@@ -61,7 +61,7 @@
     "age": 3,
     "location": "Chittagong",
     "description": "Beautiful red cow, well-built for Qurbani.",
-    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Svensk_r%C3%B6d_och_vit_boskap_%28SRB%29%2C_cropped.jpg",
     "category": "Large Animal"
   },
   {
@@ -74,7 +74,7 @@
     "age": 2,
     "location": "Rajshahi",
     "description": "Premium white goat with excellent health status.",
-    "image": "https://images.unsplash.com/photo-1516796887212-11a305228dcc?w=500",
+    "image": "https://www.natuurlijkerleven.eu/Files/2/47000/47241/FileBrowser/natuurlijkerleven/witte-melkgeit.jpg",
     "category": "Small Animal"
   }
 ]
