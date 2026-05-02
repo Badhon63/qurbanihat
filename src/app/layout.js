@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Qurbani Hat",
-  description: "Qurbani Hat",
+  title: "QurbaniHat",
+  description: "QurbaniHat",
   icons: {
     icon: "/logo.png",
   },

@@ -39,7 +39,7 @@ const Navbar = () => {
               width={35}
               height={35}
             ></Image>
-            <p className="font-bold text-xl">Qurbani Hat</p>
+            <p className="font-bold text-xl">QurbaniHat</p>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 font-medium">
