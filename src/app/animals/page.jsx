@@ -1,4 +1,5 @@
 import AnimalCard from "@/components/AnimalCard";
+import AnimalsList from "@/components/AnimalsList";
 
 const getAnimals = async () => {
   const res = await fetch(
@@ -17,15 +18,10 @@ export default async function Animals() {
     <div className="min-h-screen bg-base-50 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold">All Animals</h1>
+        <AnimalsList animals={animals} />
 
         <div className="mb-8 flex justify-between items-center">
-          <p className="text-lg font-semibold"></p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {animals.map((animal) => (
-            <AnimalCard key={animal.id} animal={animal} />
-          ))}
+          <p className="text-lg font-semibold">s</p>
         </div>
       </div>
     </div>
