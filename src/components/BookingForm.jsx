@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const BookingForm = ({ animalName }) => {
   const [success, setSuccess] = useState(false);
@@ -14,6 +15,11 @@ const BookingForm = ({ animalName }) => {
     setTimeout(() => {
       setSuccess(false);
     }, 3000);
+
+    toast.success("Booking successful!", {
+      position: "top-center",
+      autoClose: 2000,
+    });
   };
 
   return (
@@ -36,12 +42,6 @@ const BookingForm = ({ animalName }) => {
           Confirm Booking
         </button>
       </form>
-
-      {success && (
-        <p className="text-green-600 mt-4 font-medium text-center">
-          Booking successful!
-        </p>
-      )}
     </div>
   );
 };

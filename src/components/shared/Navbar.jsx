@@ -1,8 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import { FaCircleUser } from "react-icons/fa6";
+import { MdLogout } from "react-icons/md";
 
 const Navbar = () => {
+  const { data, isPending } = authClient.useSession();
+  const user = data?.user;
   return (
     <div className="bg-base-200 shadow-sm">
       <div className="container mx-auto max-lg:collapse  w-full rounded-md">
@@ -56,14 +63,37 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end gap-2">
-            <Link href={"/login"}>
-              <button className="btn btn-neutral">Login</button>
-            </Link>
-            <Link href={"/register"}>
-              <button className="btn btn-neutral hidden sm:block">
-                Register
-              </button>
-            </Link>
+            {isPending ? (
+              <span className="loading loading-spinner loading-sm"></span>
+            ) : user ? (
+              <div className="flex items-center gap-3">
+                <p className="font-semibold">{user.name}</p>
+
+                <FaCircleUser className="text-3xl" />
+
+                <button
+                  onClick={async () => {
+                    await authClient.signOut();
+                  }}
+                  className="btn btn-neutral"
+                  title="Logout"
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <>
+                <Link href="/login">
+                  <button className="btn btn-neutral">Login</button>
+                </Link>
+
+                <Link href="/register">
+                  <button className="btn btn-neutral hidden sm:block">
+                    Register
+                  </button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
 
