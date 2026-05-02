@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Deshi Shahi Cow",
+    "type": "Cow",
+    "breed": "Local Deshi",
+    "price": 120000,
+    "weight": 280,
+    "age": 3,
+    "location": "Bogura",
+    "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার.",
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500",
+    "category": "Large Animal"
+  },
+  {
+    "id": 2,
+    "name": "Fattened Goat",
+    "type": "Goat",
+    "breed": "Jamuna Pari",
+    "price": 35000,
+    "weight": 45,
+    "age": 2,
+    "location": "Dhaka",
+    "description": "Premium fattened goat, perfect for Qurbani.",
+    "image": "https://images.unsplash.com/photo-1516796887212-11a305228dcc?w=500",
+    "category": "Small Animal"
+  },
+  {
+    "id": 3,
+    "name": "Buffalo",
+    "type": "Buffalo",
+    "breed": "Murrah",
+    "price": 150000,
+    "weight": 320,
+    "age": 4,
+    "location": "Khulna",
+    "description": "Strong and healthy buffalo for Qurbani.",
+    "image": "https://images.unsplash.com/photo-1562521409-1abce4e78c4a?w=500",
+    "category": "Large Animal"
+  },
+  {
+    "id": 4,
+    "name": "Black Goat",
+    "type": "Goat",
+    "breed": "Black Bengal",
+    "price": 38000,
+    "weight": 42,
+    "age": 2.5,
+    "location": "Sylhet",
+    "description": "High-quality black goat suitable for Qurbani.",
+    "image": "https://images.unsplash.com/photo-1516796887212-11a305228dcc?w=500",
+    "category": "Small Animal"
+  },
+  {
+    "id": 5,
+    "name": "Red Cow",
+    "type": "Cow",
+    "breed": "Brahman Mix",
+    "price": 110000,
+    "weight": 270,
+    "age": 3,
+    "location": "Chittagong",
+    "description": "Beautiful red cow, well-built for Qurbani.",
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500",
+    "category": "Large Animal"
+  },
+  {
+    "id": 6,
+    "name": "White Goat",
+    "type": "Goat",
+    "breed": "Anglo-Nubian",
+    "price": 40000,
+    "weight": 48,
+    "age": 2,
+    "location": "Rajshahi",
+    "description": "Premium white goat with excellent health status.",
+    "image": "https://images.unsplash.com/photo-1516796887212-11a305228dcc?w=500",
+    "category": "Small Animal"
+  }
+]
