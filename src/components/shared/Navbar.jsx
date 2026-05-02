@@ -40,7 +40,7 @@ const Navbar = () => {
               </svg>
             </label>
             <Image
-              className="mx-2"
+              className="mx-2 hidden sm:block"
               src="/logo.png"
               alt="logo"
               width={35}
@@ -75,13 +75,15 @@ const Navbar = () => {
                 <p className="font-semibold">{user.name}</p>
 
                 {user?.image ? (
-                  <Image
-                    src={user.image}
-                    alt=""
-                    className="w-8 h-8 rounded-full"
-                    width={30}
-                    height={30}
-                  />
+                  <Link href={"/profile"}>
+                    <Image
+                      src={user.image}
+                      alt=""
+                      className="w-8 h-8 rounded-full"
+                      width={30}
+                      height={30}
+                    />
+                  </Link>
                 ) : (
                   <FaCircleUser className="text-3xl" />
                 )}

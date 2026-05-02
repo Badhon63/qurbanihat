@@ -12,7 +12,7 @@ export default function ProfilePage() {
   if (!user) return <LoadingPage />;
 
   return (
-    <div className="max-w-xl mx-auto  mt-10 ">
+    <div className="max-w-xl mx-auto mt-10 ">
       <h1 className="text-3xl font-bold">My Profile</h1>
 
       <div className="border border-black/10 rounded-lg shadow-md p-6 space-y-4 mt-5">
