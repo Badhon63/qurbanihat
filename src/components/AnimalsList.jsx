@@ -14,7 +14,7 @@ const AnimalsList = ({ animals }) => {
 
   return (
     <div>
-      <div className="mb-6 flex justify-end">
+      <div className="mb-6 flex mt-3 sm:mt-0 sm:justify-end">
         <select
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}

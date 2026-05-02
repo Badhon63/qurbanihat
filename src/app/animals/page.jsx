@@ -19,10 +19,6 @@ export default async function Animals() {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold">All Animals</h1>
         <AnimalsList animals={animals} />
-
-        <div className="mb-8 flex justify-between items-center">
-          <p className="text-lg font-semibold">s</p>
-        </div>
       </div>
     </div>
   );
