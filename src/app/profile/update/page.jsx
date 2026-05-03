@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 export default function UpdateProfile() {
   const { data } = authClient.useSession();
@@ -10,6 +11,8 @@ export default function UpdateProfile() {
 
   const [name, setName] = useState(user?.name || "");
   const [image, setImage] = useState(user?.image || "");
+
+  const router = useRouter();
 
   const handleUpdate = async () => {
     if (!name.trim() || !image.trim()) {
@@ -37,6 +40,8 @@ export default function UpdateProfile() {
       position: "top-center",
       autoClose: 2000,
     });
+
+    router.push("/profile");
   };
 
   return (

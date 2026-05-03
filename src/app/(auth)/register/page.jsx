@@ -6,10 +6,12 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const RegisterPage = () => {
   const [visible, setVisible] = useState(false);
   const [image, setImage] = useState("");
+  const router = useRouter();
 
   const {
     register,
@@ -37,6 +39,10 @@ const RegisterPage = () => {
       position: "top-center",
       autoClose: 2000,
     });
+
+    setTimeout(() => {
+      router.push("/login");
+    }, 1000);
   };
 
   return (
