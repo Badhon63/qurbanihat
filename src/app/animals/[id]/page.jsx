@@ -6,6 +6,9 @@ const getAnimal = async (id) => {
     `${process.env.NEXT_PUBLIC_BASE_URL}/data/animals.json`,
     { cache: "no-store" },
   );
+  if (!res.ok) {
+    throw new Error("Failed to fetch animals data");
+  }
 
   const animals = await res.json();
   return animals.find((a) => a.id === parseInt(id));

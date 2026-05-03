@@ -1,13 +1,14 @@
-import AnimalCard from "@/components/AnimalCard";
 import AnimalsList from "@/components/AnimalsList";
 
 const getAnimals = async () => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/data/animals.json`,
-    {
-      cache: "no-store",
-    },
+    { cache: "no-store" },
   );
+  if (!res.ok) {
+    throw new Error("Failed to fetch animals data");
+  }
+
   return res.json();
 };
 
